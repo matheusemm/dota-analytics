@@ -1,0 +1,11 @@
+/target
+/classes
+/checkouts
+*.jar
+*.class
+/.clj-kondo
+/.cpcache
+/.lein-*
+/.nrepl-history
+/.nrepl-port
+

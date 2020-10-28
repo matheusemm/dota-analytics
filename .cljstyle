@@ -1,0 +1,7 @@
+{:indents ^:replace {#"^:?require$" [[:block 0]]
+                     #"^:?import$" [[:block 0]]
+                     #"^:?use$" [[:block 0]]
+                     #"^[^ \[]" [[:inner 0]]}
+ :line-break-vars? false
+ :rewrite-namespaces? false
+ :file-pattern #"\.clj[csx]?|\.edn$"}
