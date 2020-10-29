@@ -2,9 +2,11 @@
 
  :deps
  {com.datomic/client-pro {:mvn/version "0.9.63"}
+  integrant/integrant {:mvn/version "0.8.0"}
   metosin/malli {:mvn/version "0.2.1"}
   metosin/reitit {:mvn/version "0.5.10"}
-  org.clojure/clojure {:mvn/version "1.10.1"}}
+  org.clojure/clojure {:mvn/version "1.10.1"}
+  ring/ring-jetty-adapter {:mvn/version "1.8.2"}}
 
  :aliases
  {:test
@@ -19,12 +21,12 @@
                "-d" "test"]}
   :uberjar
   {:extra-deps {seancorfield/depstar {:mvn/version "1.1.128"}}
-   :main-opts ["-m" "hf.depstar.uberjar" "dota-analytics.jar"
-               "-C" "-m" "com.patrulleros.dota-analytics"]}
+   :main-opts ["-m" "hf.depstar.uberjar" "dotalytics.jar"
+               "-C" "-m" "patrulleros.dotalytics.system"]}
 
   :dev
   {:extra-paths ["dev"]
-   :extra-deps {com.gfredericks/debug-repl {:mvn/version "0.0.11"}
-                djblue/portal {:mvn/version "0.6.2"}
+   :extra-deps {
+                ;; djblue/portal {:mvn/version "0.6.2"}
                 hashp/hashp {:mvn/version "0.2.0"}
                 integrant/repl {:mvn/version "0.3.2"}}}}}
