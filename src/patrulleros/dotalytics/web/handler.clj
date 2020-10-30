@@ -24,7 +24,7 @@
   [["/swagger.json"
     {:get {:no-doc true
            :swagger {:info {:title "DOTAlytics"
-                            :description "Bayes DOTA Coding Challenge"}}
+                            :description "DOTA Coding Challenge"}}
            :handler (reitit.swagger/create-swagger-handler)}}]
 
    ["/api/match"
@@ -87,7 +87,6 @@
                   (handler (merge request (select-keys data [:match-id-generator :db-connection]))))))})
 
 (defn default-exception-handler [^Exception e _]
-  #p e
   {:status 500
    :body {:type "exception"
           :class (-> e .getClass .getName)

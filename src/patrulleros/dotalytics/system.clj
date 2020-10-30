@@ -44,3 +44,8 @@
       (dissoc :db-name)
       (datomic/client)
       (datomic/connect {:db-name db-name})))
+
+;; main
+
+(defn -main []
+  (integrant/init config))
